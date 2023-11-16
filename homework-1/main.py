@@ -11,7 +11,7 @@ conn = psycopg2.connect(
 )
 
 
-with open('north_data/customers_data.csv', encoding="windows-1251") as file:
+with open('north_data/customers_data.csv', encoding="UTF-8") as file:
     reader = csv.DictReader(file)
     with conn:
         with conn.cursor() as cur:
@@ -23,7 +23,7 @@ with open('north_data/customers_data.csv', encoding="windows-1251") as file:
                 ))
 
 
-with open('north_data/employees_data.csv', encoding="windows-1251") as file:
+with open('north_data/employees_data.csv', encoding="UTF-8") as file:
     reader = csv.DictReader(file)
     with conn:
         with conn.cursor() as cur:
@@ -38,7 +38,7 @@ with open('north_data/employees_data.csv', encoding="windows-1251") as file:
                 ))
 
 
-with open('north_data/orders_data.csv', encoding="windows-1251") as file:
+with open('north_data/orders_data.csv', encoding="UTF-8") as file:
     reader = csv.DictReader(file)
     with conn:
         with conn.cursor() as cur:
